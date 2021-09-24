@@ -40,13 +40,12 @@ function generatePassword() {
   //validate that password length is a number between 8 and 128
   function numberValidation() {
     if (isNaN(passwordLength) || passwordLength < 8 || passwordLength > 128) {
-      alert("Please enter a number between 8 and 128.");
+      alert("You didn't choose a number between 8 and 128. You will need to start over.");
       console.log('It is returning FALSE for the number validation')
-      return false;
+      generatePassword()
     } else {
-      console.log('It is returning true for the number validation')
+      console.log('It is returning TRUE for the number validation')
       return true;
-      
     };
   }
 
@@ -55,7 +54,8 @@ function generatePassword() {
   
 
 
- if (numberValidation !== false) {
+ if (numberValidation !== true) {
+
   for (i=0; i < passwordLength; i++) {
     selectChar = charset[Math.floor(Math.random()*charset.length)];
     console.log(selectChar);
@@ -63,7 +63,8 @@ function generatePassword() {
     console.log(password);
     };
   } else {
-    alert('you suck at this.')
+    password = "";
+    alert('You will need to start over.  Try harder.');
   };
 
   return password;
