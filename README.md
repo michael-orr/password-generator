@@ -7,5 +7,5 @@ You can select how many characters you want and what type of characters you want
 
 ## Preview
 
-![The Password Generator application displays a red button to "Generate Password".](assets\images\screenshot_password_generator.PNG)
+![The Password Generator application displays a red button to "Generate Password".](/assets/images/screenshot_password_generator.PNG)
 
